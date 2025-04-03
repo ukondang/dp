@@ -261,11 +261,9 @@ document.addEventListener("click", function () {
 });
 </script>
  <script>
-     function autoScroll() {
-    window.scrollBy(0, 2); // Scroll turun 2px setiap interval
-    setTimeout(autoScroll, 50); // Loop dengan jeda 50ms
-}
-window.onload = autoScroll;
+     setTimeout(function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}, 5000); // Scroll ke atas setelah 3 detik
 </script>
 </body>
 </html>

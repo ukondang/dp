@@ -251,6 +251,17 @@
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="src/main.js" type="module"></script>
+<script src="src/main.js" type="module"> document.addEventListener("DOMContentLoaded", function () {
+    const elem = document.documentElement; // Ambil elemen utama
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}); </script>
 </body>
 </html>

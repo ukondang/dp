@@ -261,9 +261,9 @@ document.addEventListener("click", function () {
 });
 </script>
  <script>
-     setTimeout(function() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}, 5000); // Scroll ke atas setelah 3 detik
+     window.onload = function() {
+    window.scrollTo(0, document.body.scrollHeight);
+};
 </script>
 </body>
 </html>

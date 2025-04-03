@@ -72,3 +72,16 @@ export const home = () => {
 
     initializeHome();
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elem = document.documentElement; // Ambil elemen utama
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+});

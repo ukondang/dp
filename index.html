@@ -251,17 +251,14 @@
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="src/main.js" type="module"> document.addEventListener("DOMContentLoaded", function () {
-    const elem = document.documentElement; // Ambil elemen utama
-    if (elem.requestFullscreen) {
+<script src="src/main.js" type="module"> </script>
+<script>
+document.addEventListener("click", function () {
+    let elem = document.documentElement;
+    if (!document.fullscreenElement) {
         elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { // Firefox
-        elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { // IE/Edge
-        elem.msRequestFullscreen();
     }
-}); </script>
+});
+</script>
 </body>
 </html>

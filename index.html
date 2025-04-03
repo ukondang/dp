@@ -259,6 +259,12 @@ document.addEventListener("click", function () {
         elem.requestFullscreen();
     }
 });
+*//scroll
+    function autoScroll() {
+    window.scrollBy(0, 2); // Scroll turun 2px setiap interval
+    setTimeout(autoScroll, 50); // Loop dengan jeda 50ms
+}
+window.onload = autoScroll;
 </script>
 </body>
 </html>

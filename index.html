@@ -228,11 +228,32 @@
                 </button>
             </div>
         </div>
-        <style>
+         <style>
         body {
-            background: url('src/assets/images') no-repeat center center fixed;
-            background-size: cover;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f0e3;
             text-align: center;
+        }
+        .bingkai {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('src/assets/images/border.png') no-repeat center center;
+            background-size: cover;
+            z-index: 9999; /* Paling depan */
+            pointer-events: none; /* Supaya klik tetap bisa dilakukan di konten */
+        }
+        .undangan {
+            position: relative;
+            z-index: 1; /* Konten tetap terlihat */
+            background: white;
+            padding: 20px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
         }
     </style>
 
